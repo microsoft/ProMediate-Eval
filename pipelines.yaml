@@ -1,0 +1,32 @@
+# azure-pipelines.yml
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  # (Optional) Your build/test steps here
+  - script: echo "Build your project here (dotnet build / npm ci && npm run build / etc.)"
+    inputs:    displayName: 'Build (placeholder)'
+      scanType: 'all'            # scans source + package manifests
+      verbosity: 'Detailed'      # 'Minimal'|'Detailed'
+
+  # 2) Generate NOTICE file with discovered licenses/components
+  - task: ComponentGovernanceGenerateNotice@0
+    displayName: 'Component Governance: Generate NOTICE'
+    inputs:
+      outputfile: '$(Build.SourcesDirectory)/NOTICE'
+      customTextFile: ''         # (optional) path to add custom text to NOTICE
+
+  # 3) Publish the NOTICE as a build artifact
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish NOTICE'
+    inputs:
+      PathtoPublish: '$(Build.SourcesDirectory)/NOTICE'
+      ArtifactName: 'NOTICE'
+      publishLocation: 'Container'
+
+  # 1) Detect third-party components across the entire repo
+  - task: ComponentGovernanceComponentDetection@0
+    displayName: 'Component Governance: Detect OSS Components'

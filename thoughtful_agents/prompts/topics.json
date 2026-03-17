@@ -1,0 +1,40 @@
+{
+    "hmo":[
+        "Market Share Target Tiers",
+        "Discount Pricing Schedule",
+        "Marketing Support",
+        "Formulary Status",
+        "Contract Term"
+    ],
+    "williams":[
+        "Consultation procedures",
+        "Allocation of costs",
+        "Policy evaluation"
+    ],
+    "river":[
+        "Water Prediction and Audit of Water Withdrawal and Use",
+        "Unused Water Allocations",
+        "Environmental Flows"
+    ],
+    "ias":
+    [
+        "Budget allocations",
+        "Architecture",
+        "Organizational structure",
+        "Project time frame"
+    ],
+    "francis":
+    [
+        "EXPANSION OF THE MEDICAL MANAGEMENT MODEL?",
+        "WHO SHOULD DECIDE ON PRACTICE NORMS?",
+        "WHO SHOULD TAKE THE LEAD IN TRAINING?",
+        "WHAT SHOULD BE THE PACKAGE OF BUDGET PRIORITIES?"
+    ],
+    "flagship":
+    [
+        "New purchase amount",
+        "Engines to Be Purchased",
+        "Contents for Upgrade",
+        "New value for fleet upgrade"
+    ]
+}
