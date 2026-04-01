@@ -1,14 +1,15 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
+import json
+import argparse
+from tqdm import tqdm
+# from thoughtful_agents.utils.prompts import instruction_prompt
 import os
 from openai import OpenAI
 import itertools
 import copy
 import sys
-import json
-import argparse
-from tqdm import tqdm
 
 api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(
