@@ -18,7 +18,7 @@ from openai import OpenAI
 api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(
     api_key=api_key,
-    api_version="2024-12-01-preview",
+  
 )
 def evaluate_consensus_change(scores, num_turns=10):
     if len(scores) < num_turns:
