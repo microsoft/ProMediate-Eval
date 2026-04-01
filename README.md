@@ -30,7 +30,7 @@ We provide a structured evaluation framework and testbed to evaluate the effecti
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/....[placeholder]
+git clone https://github.com/microsoft/ProMediate-Eval.git
 cd ProMediate
 ```
 
@@ -43,6 +43,10 @@ pip install -e .
 
 ```bash
 export OPENAI_API_KEY=your_api_key_here
+```
+### Set up Claude API key
+```bash
+export CLAUDE_API_KEY=your_api_key_here
 ```
 ## Project Structure
 
