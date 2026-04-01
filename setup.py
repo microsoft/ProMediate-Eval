@@ -22,7 +22,7 @@ setup(
         "numpy>=1.20.0",
         "pandas>=1.2.0",
         "openai>=1.0.0",
-        "anthropic>=1.0.0",
+        "anthropic>=0.30.0",
         "spacy>=3.0.0",
         "matplotlib>=3.0.0",
         "typing-extensions>=4.0.0",  # For better typing support
