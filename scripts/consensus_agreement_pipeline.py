@@ -1,22 +1,20 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-import json
-import argparse
-from tqdm import tqdm
-# from thoughtful_agents.utils.prompts import instruction_prompt
 import os
-from openai import AzureOpenAI
+from openai import OpenAI
 import itertools
 import copy
 import sys
-endpoint ="https://roar-dev-swedencentral.openai.azure.com/"
-api_key = os.getenv("AZURE_OPENAI_API_KEY")
-client = AzureOpenAI(
-    azure_endpoint=endpoint,
+import json
+import argparse
+from tqdm import tqdm
+
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(
     api_key=api_key,
-    api_version="2024-12-01-preview",
 )
+
 # topics = [
 #     "Market Share Target Tiers",
 #     "Discount Pricing Schedule",
