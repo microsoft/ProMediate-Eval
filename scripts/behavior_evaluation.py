@@ -1,20 +1,17 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
-
 import os
-from openai import AzureOpenAI
+from openai import OpenAI
 import itertools
 import copy
 import sys
 import json
 import argparse
 from tqdm import tqdm
-endpoint ="https://roar-dev-swedencentral.openai.azure.com/"
-api_key = os.getenv("AZURE_OPENAI_API_KEY")
-client = AzureOpenAI(
-    azure_endpoint=endpoint,
+
+api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(
     api_key=api_key,
-    api_version="2024-12-01-preview",
 )
 
 def main(conversation_file, output_file):
